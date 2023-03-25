@@ -1,16 +1,27 @@
-using API.Data;
-using Microsoft.EntityFrameworkCore; 
+using API.Extensions;
+
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
+var config = builder.Configuration;
+var services = builder.Services;
+
 // Add services to the container.
-builder.Services.AddDbContext<DataContext>(options => 
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+services.AddApplicationServices(config);
+services.AddControllers();
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
+services.AddCors(p => p.AddPolicy(MyAllowSpecificOrigins,
+    builder =>
+    {
+        builder
+            .WithOrigins(config.GetSection("Cors")["AppClient"])
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    }
+));
+services.AddIdentityServices(config);
 
 var app = builder.Build();
 
@@ -23,6 +34,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+app.UseCors(MyAllowSpecificOrigins);
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers(); 

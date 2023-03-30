@@ -1,0 +1,122 @@
+[
+    {
+      "UserName": "radu_test1",
+      "cities": [
+        {
+          "name": "Stavangerr",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": [
+            {
+              "name": "Stavanger Restarurant",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            }
+          ]
+        },
+        {
+          "name": "Oslo",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": [
+            {
+              "name": "Oslo Opera",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            },
+            {
+              "name": "Oslo Museum",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            }
+          ]
+        },
+        {
+          "name": "Bergen",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": [
+            {
+              "name": "Bergen Restarurant",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            }
+          ]
+        },
+        {
+          "name": "Bucharest",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": []
+        },
+        {
+          "name": "Cluj",
+          "latitude": "123",
+          "longitude": "123",
+          "locations": []
+        }
+      ]
+    },
+    {
+      "UserName": "radu_test2",
+      "cities": [
+        {
+          "name": "Stavanger",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": [
+            {
+              "name": "Stavanger Restarurant",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            }
+          ]
+        },
+        {
+          "name": "Oslo",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": [
+            {
+              "name": "Oslo Opera",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            },
+            {
+              "name": "Oslo Huset",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            }
+          ]
+        },
+        {
+          "name": "Bergen",
+          "longitude": "12345",
+          "latitude": "12345",
+          "locations": [
+            {
+              "name": "Bergen Street 1",
+              "longitude": "12345",
+              "latitude": "12345",
+              "description": "lorem ipsum dolor lorem ipsum dolor",
+              "address": "5th Avenue"
+            }
+          ]
+        }
+      ]
+    }
+  ]

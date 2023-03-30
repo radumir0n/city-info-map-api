@@ -31,19 +31,6 @@ internal class Program
 
         var app = builder.Build();
 
-        using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-        try
-        {
-            var context = serviceScope.ServiceProvider.GetRequiredService<DataContext>();
-            await context.Database.MigrateAsync();
-            await Seed.SeedUsers(context);
-        }
-        catch (Exception ex)
-        {
-            var logger = serviceScope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-            logger.LogError(ex, "An error occurred during migration");
-        }
-
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
